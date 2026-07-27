@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="For A Child, LLC">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F9EB8"/>
+      <stop offset="50%" stop-color="#6FBA96"/>
+      <stop offset="100%" stop-color="#E8917A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="28" fill="#FFFAF6" fill-opacity="0.18"/>
+  <text x="600" y="290" text-anchor="middle" fill="#FFFFFF" font-family="system-ui,sans-serif" font-size="48" font-weight="600">For A Child, LLC</text>
+  <text x="600" y="350" text-anchor="middle" fill="#FFF8F0" font-family="system-ui,sans-serif" font-size="24">Daycare &amp; Licensed Preschool · North Canton, Ohio</text>
+</svg>
