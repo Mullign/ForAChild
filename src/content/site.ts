@@ -162,7 +162,7 @@ export const homeContent = {
       {
         title: "CPR Certified Staff",
         description:
-          "Staff are certified in CPR, First Aid, Communicable Disease, and Child Abuse recognition.",
+          "Staff are certified in CPR, First Aid, Communicable Disease, and Child Abuse.",
       },
       {
         title: "Clean Classrooms",
