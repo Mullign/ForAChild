@@ -65,8 +65,8 @@ export function organizationJsonLd() {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "06:30",
-        closes: "18:30",
-        description: "Daycare",
+        closes: "18:00",
+        description: "Daycare and preschool",
       },
     ],
   };

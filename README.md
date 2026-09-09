@@ -68,8 +68,8 @@ Use this list as you gather materials from the center. Check items off as they a
 
 ### Safety & trust
 
-- [ ] **CPR / first-aid** certification details for staff
-- [ ] **Daily parent communication** practices (app, reports, etc.)
+- [x] **CPR / First Aid / Communicable Disease / Child Abuse** certifications
+- [x] **Daily parent communication** (Daily Sheet, ClassDojo, call/text anytime)
 
 ### Team & about
 

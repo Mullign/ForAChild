@@ -49,8 +49,8 @@ export const siteConfig = {
   },
 
   hours: [
-    { label: "Daycare", value: "Monday–Friday, 6:30 AM – 6:30 PM" },
-    { label: "Preschool", value: "Monday–Friday, 9:00 AM – 11:30 AM" },
+    { label: "Daycare", value: "Monday–Friday, 6:30 AM – 6:00 PM" },
+    { label: "Preschool", value: "Monday–Friday, 6:30 AM – 6:00 PM" },
   ],
 
   licensing:
@@ -127,7 +127,7 @@ export const homeContent = {
     eyebrow: "Our Hours",
     title: "Daycare and licensed preschool",
     intro:
-      "Daycare is available Monday through Friday, 6:30 AM to 6:30 PM. Our licensed preschool program meets Monday through Friday, 9:00 AM to 11:30 AM.",
+      "Daycare and licensed preschool are both available Monday through Friday, 6:30 AM to 6:00 PM.",
   },
   philosophy: {
     eyebrow: "Our Mission",
@@ -157,11 +157,12 @@ export const homeContent = {
       {
         title: "Qualified Teachers",
         description:
-          "Teachers undergo extensive training and certification to help ensure children have a prepared and safe environment for learning.",
+          "Our teachers have early childhood education degrees or a state-accredited CDA.",
       },
       {
         title: "CPR Certified Staff",
-        description: "[CPR / first-aid certification details pending.]",
+        description:
+          "Staff are certified in CPR, First Aid, Communicable Disease, and Child Abuse recognition.",
       },
       {
         title: "Clean Classrooms",
@@ -171,7 +172,7 @@ export const homeContent = {
       {
         title: "Daily Communication",
         description:
-          "[Parent communication practices pending. We welcome parent involvement in children’s daily activities.]",
+          "Each child receives a Daily Sheet describing their day. Families also stay connected through the ClassDojo app, and parents can call or text at any time.",
       },
       {
         title: "Age-Appropriate Learning",
