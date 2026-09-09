@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { galleryPlaceholders, homeContent } from "@/content/site";
+import { galleryImages, homeContent } from "@/content/site";
 import { Button } from "@/components/ui/Button";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Section, SectionHeader } from "@/components/ui/Section";
@@ -7,7 +7,7 @@ import { displayCopy } from "@/lib/utils";
 
 export function GalleryPreview() {
   const { gallery } = homeContent;
-  const preview = galleryPlaceholders.slice(0, 6);
+  const preview = galleryImages.slice(0, 6);
 
   return (
     <Section tone="default" ariaLabelledBy="gallery-preview-heading">
@@ -27,6 +27,7 @@ export function GalleryPreview() {
               <PlaceholderImage
                 label={item.label}
                 alt={item.alt}
+                src={item.src}
                 aspect="square"
                 className="transition duration-300 hover:scale-[1.02]"
               />

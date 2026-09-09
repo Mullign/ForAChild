@@ -52,6 +52,9 @@ export function HomeHero() {
           aspect="hero"
           label={hero.imageLabel}
           alt={hero.imageAlt}
+          src={hero.imageSrc}
+          priority
+          objectPosition="center 35%"
           className="w-full rounded-none"
         />
       </div>

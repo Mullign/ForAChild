@@ -32,13 +32,15 @@ export default function AboutPage() {
               <p key={paragraph}>{paragraph}</p>
             ))}
             <div className="pt-4">
-              <Button href="/contact?intent=tour">Schedule a Tour</Button>
+              <Button href="/contact">Schedule a Tour</Button>
             </div>
           </div>
           <PlaceholderImage
-            label="About / campus photo pending"
-            alt="[About page photo pending]"
+            label="Classroom at For A Child"
+            alt="A caregiver with an infant and toddler in a For A Child classroom"
+            src="/images/gallery/infant-toddler.jpg"
             aspect="landscape"
+            objectPosition="center 25%"
           />
         </div>
       </Section>

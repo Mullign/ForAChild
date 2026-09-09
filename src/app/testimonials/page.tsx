@@ -47,7 +47,7 @@ export default function TestimonialsPage() {
           ))}
         </ul>
         <div className="mt-10">
-          <Button href="/contact?intent=tour">Schedule a Tour</Button>
+          <Button href="/contact">Schedule a Tour</Button>
         </div>
       </Section>
     </>

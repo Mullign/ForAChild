@@ -37,7 +37,6 @@ Open [http://localhost:3000](http://localhost:3000).
 | Copy, hours, contact, nav, testimonials, team | `src/content/site.ts` |
 | Colors / pastel theme | `src/app/globals.css` (`--brand`, `--accent`, `--mint`, etc.) |
 | Logo & favicon | `public/images/brand/` |
-| Forms UI | `src/components/forms/` |
 
 ---
 
@@ -47,8 +46,8 @@ Use this list as you gather materials from the center. Check items off as they a
 
 ### Contact & location
 
-- [ ] **Email address** — not provided yet (`siteConfig.contact.email`)
-- [ ] **Google Maps embed URL** — address is set; add `mapsEmbedUrl` for an in-page map (`siteConfig.contact.mapsEmbedUrl`)
+- [x] **Email address** — `forachildkatie@yahoo.com`
+- [x] **Google Maps embed** — in-page map preview on Contact (`siteConfig.contact.mapsEmbedUrl`)
 - [ ] Confirm **ServUs Plaza / Servus Center** naming is exactly as they want it displayed
 
 ### Branding & design
@@ -57,25 +56,15 @@ Use this list as you gather materials from the center. Check items off as they a
 - [ ] Optional: **updated logo** export (transparent background preferred — current logo has a black background)
 - [ ] **Open Graph / social share image** — replace `public/images/og-placeholder.svg` with a real 1200×630 image
 
-### Photography (all pages still use placeholders)
+### Photography
 
-- [ ] **Hero** image (welcoming classroom or outdoor play)
-- [ ] **About / campus** photo
-- [ ] **Learning philosophy** photo (teachers with children)
-- [ ] **Program** photos (infant, toddler, preschool, before & after, summer)
-- [ ] **Gallery** set (learning, teachers, outdoor play, classrooms, reading, art, science, music, playground, family events)
-- [ ] **Staff** headshots (Cricket Scheurer, Katie Thomas)
-
-### Programs copy
-
-Preschool hours are live. These still need ages, descriptions, daily rhythm, and highlights:
-
-- [ ] **Infant Care**
-- [ ] **Toddler Care**
-- [ ] **Before & After School**
-- [ ] **Summer Programs**
-- [ ] Fuller **Daycare** program narrative (hours exist; richer copy welcome)
-- [ ] Confirm which program pages should stay in the nav if a program is not offered
+- [x] Hero image (storytime)
+- [x] About / classroom photo
+- [x] Learning philosophy photo (teachers with children)
+- [x] Classroom activity photos (infant/toddler, learning, play)
+- [x] Gallery set (6 real classroom photos)
+- [ ] More gallery photos as available (outdoor play, playground, family events, art, music, etc.)
+- [ ] Staff headshots (Cricket Scheurer, Katie Thomas)
 
 ### Safety & trust
 
@@ -93,10 +82,11 @@ Preschool hours are live. These still need ages, descriptions, daily rhythm, and
 - [ ] **Name** for the first unnamed testimonial (currently shown as “A For A Child family”)
 - [ ] More testimonials if available
 
-### Enrollment
+### Contact / enrollment (office page)
 
-- [ ] **Enrollment packet / downloadable forms** (PDF links)
-- [ ] Step-by-step enrollment process details (step 3 is still pending)
+Enrollment and tours go through **Contact** (`/contact`) — Katie’s office. `/enrollment` redirects there.
+
+- [ ] **Enrollment packet / downloadable forms** (PDF links), if they want them on the site
 - [ ] Tuition / rates (only if they want this public)
 
 ### News / blog
@@ -104,13 +94,9 @@ Preschool hours are live. These still need ages, descriptions, daily rhythm, and
 - [ ] Decide whether to keep **News & Updates** (`/blog`) — page exists but is empty and not in the main nav
 - [ ] First posts / classroom updates when ready
 
-### Forms & backend (important for launch)
+### Forms & backend
 
-Contact, tour request, and enrollment forms are **UI-only** today. They validate in the browser and then show a thank-you message that asks families to also call Katie.
-
-- [ ] Wire forms to a real backend (email service, Formspree, Resend, API route, etc.)
-- [ ] Decide on spam protection (honeypot / CAPTCHA) if needed
-- [ ] Final confirmation email / auto-reply copy
+Contact uses a **mailto** link to Katie (`forachildkatie@yahoo.com`) — no form backend needed for email.
 
 ### Optional future features (not started)
 
@@ -131,6 +117,10 @@ These were scoped for later expansion — only build when requested:
 - Parent Resources page — removed by request
 - Careers page — removed by request
 - Footer organization charity/agency links — removed by request
+- Programs page and program detail routes — removed by request
+- Before & After School — removed by request
+- FAQ page — removed by request
+- Standalone Enrollment page — merged into Contact (Katie’s office)
 
 ---
 

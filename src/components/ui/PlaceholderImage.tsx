@@ -1,10 +1,14 @@
+import Image from "next/image";
 import { cx } from "@/lib/utils";
 
-type PlaceholderImageProps = {
+type SiteImageProps = {
   label: string;
   alt: string;
+  src?: string;
   className?: string;
   aspect?: "hero" | "landscape" | "square" | "portrait";
+  priority?: boolean;
+  objectPosition?: string;
 };
 
 const aspectClasses = {
@@ -20,18 +24,45 @@ function cleanAlt(alt: string, label: string) {
 }
 
 /**
- * Visual stand-in until real photography is provided.
+ * Real photo when `src` is provided; soft pastel placeholder otherwise.
  */
-export function PlaceholderImage({
+export function SiteImage({
   label,
   alt,
+  src,
   className,
   aspect = "landscape",
-}: PlaceholderImageProps) {
+  priority = false,
+  objectPosition = "center",
+}: SiteImageProps) {
+  const accessibleAlt = cleanAlt(alt, label);
+
+  if (src) {
+    return (
+      <div
+        className={cx(
+          "relative overflow-hidden rounded-[var(--radius-lg)] bg-surface-muted",
+          aspectClasses[aspect],
+          className,
+        )}
+      >
+        <Image
+          src={src}
+          alt={accessibleAlt}
+          fill
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1100px"
+          className="object-cover"
+          style={{ objectPosition }}
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       role="img"
-      aria-label={cleanAlt(alt, label)}
+      aria-label={accessibleAlt}
       className={cx(
         "relative overflow-hidden rounded-[var(--radius-lg)] bg-gradient-to-br from-blush-soft via-brand-soft to-mint-soft",
         aspectClasses[aspect],
@@ -59,3 +90,6 @@ export function PlaceholderImage({
     </div>
   );
 }
+
+/** @deprecated Use SiteImage */
+export const PlaceholderImage = SiteImage;

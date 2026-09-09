@@ -25,9 +25,8 @@ export const siteConfig = {
   contact: {
     phone: "330-966-7010",
     phoneHref: "tel:3309667010",
-    /** Email not provided yet */
-    email: "",
-    emailHref: "",
+    email: "forachildkatie@yahoo.com",
+    emailHref: "mailto:forachildkatie@yahoo.com",
     address: {
       street: "1300 South Main Street, Suite 1000",
       city: "North Canton",
@@ -43,7 +42,8 @@ export const siteConfig = {
       "Please drive slowly — children cross the drive.",
     ],
     askFor: "Katie Thomas, Director of Operations",
-    mapsEmbedUrl: "",
+    mapsEmbedUrl:
+      "https://www.google.com/maps?q=1300+South+Main+Street+Suite+1000+North+Canton+OH+44720&hl=en&z=16&output=embed",
     mapsLink:
       "https://www.google.com/maps/search/?api=1&query=1300+South+Main+Street+Suite+1000+North+Canton+OH+44720",
   },
@@ -63,57 +63,22 @@ export const siteConfig = {
 export type NavItem = {
   label: string;
   href: string;
-  children?: { label: string; href: string; description?: string }[];
 };
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  {
-    label: "Programs",
-    href: "/programs",
-    children: [
-      {
-        label: "Infant Care",
-        href: "/programs/infant-care",
-        description: "[Program details pending]",
-      },
-      {
-        label: "Toddler Care",
-        href: "/programs/toddler-care",
-        description: "[Program details pending]",
-      },
-      {
-        label: "Preschool",
-        href: "/programs/preschool",
-        description: "Monday–Friday, 9:00 AM – 11:30 AM",
-      },
-      {
-        label: "Before & After School",
-        href: "/programs/before-after-school",
-        description: "[Program details pending]",
-      },
-      {
-        label: "Summer Programs",
-        href: "/programs/summer",
-        description: "[Program details pending]",
-      },
-    ],
-  },
-  { label: "Enrollment", href: "/enrollment" },
   { label: "Gallery", href: "/gallery" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerQuickLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Programs", href: "/programs" },
-  { label: "Enrollment", href: "/enrollment" },
-  { label: "Schedule a Tour", href: "/contact?intent=tour" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Schedule a Tour", href: "/contact" },
   { label: "Meet the Team", href: "/about#meet-the-team" },
-  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -122,11 +87,13 @@ export const homeContent = {
     headline:
       "When children become involved, they see, they think, they understand; they pursue.",
     subheadline: "North Canton’s best daycare and licensed preschool",
-    imageAlt: "[Hero image: welcoming classroom or outdoor play — photo pending]",
-    imageLabel: "Hero photo pending",
-    primaryCta: { label: "Schedule a Tour", href: "/contact?intent=tour" },
-    secondaryCta: { label: "Enroll Today", href: "/enrollment" },
-    tertiaryCta: { label: "Contact Us", href: "/contact" },
+    imageSrc: "/images/gallery/storytime.jpg",
+    imageAlt:
+      "A teacher reading a picture book to a group of children during storytime at For A Child",
+    imageLabel: "Storytime",
+    primaryCta: { label: "Schedule a Tour", href: "/contact" },
+    secondaryCta: { label: "Contact Us", href: "/contact" },
+    tertiaryCta: { label: "Call 330-966-7010", href: "tel:3309667010" },
   },
   whyChooseUs: {
     eyebrow: "Why Choose Us",
@@ -157,10 +124,10 @@ export const homeContent = {
     ],
   },
   programs: {
-    eyebrow: "Our Programs",
+    eyebrow: "Our Hours",
     title: "Daycare and licensed preschool",
     intro:
-      "Daycare is available Monday through Friday, 6:30 AM to 6:30 PM. Our licensed preschool program meets Monday through Friday, 9:00 AM to 11:30 AM. Additional program details will be added as provided.",
+      "Daycare is available Monday through Friday, 6:30 AM to 6:30 PM. Our licensed preschool program meets Monday through Friday, 9:00 AM to 11:30 AM.",
   },
   philosophy: {
     eyebrow: "Our Mission",
@@ -171,8 +138,10 @@ export const homeContent = {
       "We believe children should be respected and recognized for individual abilities, unique characteristics, and unlimited potential. We will accomplish this by providing the best environment for your child through continuous improvement of our caregivers, training, curriculum, and facilities.",
       "Our staff understands that children are at their best when their needs are met through activities such as, but not limited to, literature, cooking, math, and letter manipulatives. These practices contribute to each child’s personal growth and development.",
     ],
-    imageAlt: "[Teachers interacting with children — photo pending]",
-    imageLabel: "Philosophy photo pending",
+    imageSrc: "/images/gallery/teachers-play.jpg",
+    imageAlt:
+      "A teacher sitting with young children during floor play with colorful toys at For A Child",
+    imageLabel: "Teachers and children playing",
   },
   safety: {
     eyebrow: "Safety & Trust",
@@ -220,73 +189,17 @@ export const homeContent = {
   gallery: {
     eyebrow: "Gallery",
     title: "A glimpse into our days",
-    intro: "[Gallery photos pending — real classroom and campus images coming soon.]",
+    intro:
+      "Moments from classrooms at For A Child — learning, play, storytime, and caring teachers.",
     cta: { label: "View Full Gallery", href: "/gallery" },
   },
   cta: {
     title: "Ready to visit For A Child?",
     body: "Katie Thomas, Director of Operations, will be happy to answer your questions and set up a visit. When you call, please ask for Katie.",
-    primaryCta: { label: "Schedule a Tour", href: "/contact?intent=tour" },
-    secondaryCta: { label: "Enroll Today", href: "/enrollment" },
+    primaryCta: { label: "Schedule a Tour", href: "/contact" },
+    secondaryCta: { label: "Contact Us", href: "/contact" },
     tertiaryCta: { label: "Call 330-966-7010", href: "tel:3309667010" },
   },
-} as const;
-
-export const programSummaries = [
-  {
-    slug: "infant-care",
-    title: "Infant Care",
-    ages: "[Ages pending]",
-    description: "[Infant care details pending.]",
-    href: "/programs/infant-care",
-    imageLabel: "Infant care photo pending",
-    imageAlt: "[Infant care classroom — photo pending]",
-  },
-  {
-    slug: "toddler-care",
-    title: "Toddler Care",
-    ages: "[Ages pending]",
-    description: "[Toddler care details pending.]",
-    href: "/programs/toddler-care",
-    imageLabel: "Toddler care photo pending",
-    imageAlt: "[Toddler classroom — photo pending]",
-  },
-  {
-    slug: "preschool",
-    title: "Preschool",
-    ages: "Monday–Friday, 9:00 AM – 11:30 AM",
-    description:
-      "Our licensed preschool program supports children’s growth through engaging, developmentally appropriate learning in a nurturing classroom environment.",
-    href: "/programs/preschool",
-    imageLabel: "Preschool photo pending",
-    imageAlt: "[Preschool learning — photo pending]",
-  },
-  {
-    slug: "before-after-school",
-    title: "Before & After School",
-    ages: "[Ages pending]",
-    description: "[Before & after school details pending.]",
-    href: "/programs/before-after-school",
-    imageLabel: "Before & after school photo pending",
-    imageAlt: "[School-age care — photo pending]",
-  },
-  {
-    slug: "summer",
-    title: "Summer Programs",
-    ages: "[Ages pending]",
-    description: "[Summer program details pending.]",
-    href: "/programs/summer",
-    imageLabel: "Summer programs photo pending",
-    imageAlt: "[Summer outdoor play — photo pending]",
-  },
-] as const;
-
-/** Daycare overview used on programs pages — hours provided; fuller copy pending */
-export const daycareOverview = {
-  title: "Daycare",
-  hours: "Monday–Friday, 6:30 AM – 6:30 PM",
-  description:
-    "Full-day daycare in a friendly, comfortable setting with educated staff focused on a fun, clean, educational, and creative environment.",
 } as const;
 
 export const testimonials = [
@@ -306,26 +219,47 @@ export const testimonials = [
   },
 ] as const;
 
-export const galleryPlaceholders = [
-  { id: "1", label: "Children learning", alt: "[Children learning — photo pending]" },
+export const galleryImages = [
+  {
+    id: "1",
+    src: "/images/gallery/storytime.jpg",
+    label: "Storytime",
+    alt: "A teacher reading aloud to children seated on a colorful classroom rug",
+  },
   {
     id: "2",
+    src: "/images/gallery/teachers-play.jpg",
     label: "Teachers interacting",
-    alt: "[Teachers interacting — photo pending]",
+    alt: "A teacher playing on the floor with young children and colorful toys",
   },
-  { id: "3", label: "Outdoor play", alt: "[Outdoor play — photo pending]" },
-  { id: "4", label: "Classroom", alt: "[Classroom environment — photo pending]" },
-  { id: "5", label: "Reading", alt: "[Reading time — photo pending]" },
-  { id: "6", label: "Art", alt: "[Art activities — photo pending]" },
-  { id: "7", label: "Science", alt: "[Science exploration — photo pending]" },
-  { id: "8", label: "Music", alt: "[Music activities — photo pending]" },
-  { id: "9", label: "Playground", alt: "[Playground — photo pending]" },
   {
-    id: "10",
-    label: "Family involvement",
-    alt: "[Family involvement — photo pending]",
+    id: "3",
+    src: "/images/gallery/infant-toddler.jpg",
+    label: "Infant & toddler care",
+    alt: "A caregiver with an infant and toddler surrounded by toys in the classroom",
+  },
+  {
+    id: "4",
+    src: "/images/gallery/summer-tracing.jpg",
+    label: "Classroom learning",
+    alt: "A child tracing lines with a marker during a table activity",
+  },
+  {
+    id: "5",
+    src: "/images/gallery/sorting-play.jpg",
+    label: "Hands-on learning",
+    alt: "Two children sorting colorful animal counters on an alphabet rug",
+  },
+  {
+    id: "6",
+    src: "/images/gallery/color-sorting.jpg",
+    label: "Color sorting",
+    alt: "Children sorting bear counters by color into small buckets",
   },
 ] as const;
+
+/** @deprecated Use galleryImages */
+export const galleryPlaceholders = galleryImages;
 
 export const teamMembers = [
   {
@@ -390,43 +324,12 @@ export const pageContent = {
     activitiesNote:
       "We also encourage parents to provide support and participate in their child’s daily activities.",
   },
-  programs: {
-    title: "Programs",
-    description:
-      "Explore daycare and licensed preschool programs at For A Child, LLC in North Canton, Ohio.",
-    headline: "Our Programs",
-    intro:
-      "For A Child offers daycare Monday through Friday, 6:30 AM to 6:30 PM, and a licensed preschool program Monday through Friday, 9:00 AM to 11:30 AM. Additional program details will be added as they are provided.",
-  },
-  enrollment: {
-    title: "Enrollment",
-    description:
-      "Start the enrollment process or schedule a visit with For A Child, LLC in North Canton, Ohio.",
-    headline: "Enrollment",
-    intro:
-      "Interested in joining the For A Child family? Contact us with your name, email, phone number, and message. Katie Thomas, Director of Operations, will be happy to answer questions and set up a visit.",
-    steps: [
-      {
-        title: "Reach out",
-        description:
-          "Call 330-966-7010 and ask for Katie, or send us a message through our contact form.",
-      },
-      {
-        title: "Schedule a visit",
-        description:
-          "Katie will be happy to answer your questions and set up a visit to our North Canton center.",
-      },
-      {
-        title: "Complete enrollment",
-        description: "[Enrollment packet and next-step details pending.]",
-      },
-    ],
-  },
   gallery: {
     title: "Gallery",
     description: "Photos from life at For A Child, LLC in North Canton, Ohio.",
     headline: "Gallery",
-    intro: "[Gallery photos pending.]",
+    intro:
+      "A look inside For A Child — storytime, play, and everyday learning moments.",
   },
   testimonials: {
     title: "Testimonials",
@@ -435,41 +338,13 @@ export const pageContent = {
     headline: "Testimonials",
     intro: "Hear from families in the For A Child community.",
   },
-  faq: {
-    title: "FAQ",
-    description: "[FAQ meta description pending.]",
-    headline: "Frequently asked questions",
-    intro: "Answers to common questions about For A Child.",
-    items: [
-      {
-        question: "What are your hours?",
-        answer:
-          "Daycare is Monday through Friday, 6:30 AM to 6:30 PM. Preschool is Monday through Friday, 9:00 AM to 11:30 AM.",
-      },
-      {
-        question: "Where are you located?",
-        answer:
-          "1300 South Main Street, Suite 1000, North Canton, Ohio 44720. We are in the lower level at the rear of the ServUs Plaza / Servus Center at North Canton Plaza. Enter the drive on the south side of the plaza and drive around to the back. Please drive slowly — children cross the drive.",
-      },
-      {
-        question: "Who should I ask for when I call?",
-        answer:
-          "Please ask for Katie Thomas, Director of Operations. Katie will be happy to answer your questions and set up a visit.",
-      },
-      {
-        question: "Is For A Child licensed?",
-        answer:
-          "Yes. For A Child is licensed through the Ohio Department of Jobs and Family Services.",
-      },
-    ],
-  },
   contact: {
     title: "Contact",
     description:
-      "Contact For A Child, LLC in North Canton, Ohio. Ask for Katie Thomas to schedule a visit.",
-    headline: "Contact Us",
+      "Contact the office at For A Child, LLC. Ask for Katie Thomas, Director of Operations, to enroll or schedule a visit.",
+    headline: "Contact the Office",
     intro:
-      "Thank you for your interest in For A Child. When you call, please ask for Katie Thomas, Director of Operations. Katie will be happy to answer your questions and set up a visit.",
+      "Ready to enroll or schedule a tour? Please ask for Katie Thomas, Director of Operations. Katie will be happy to answer your questions and help you get started.",
   },
   blog: {
     title: "News & Updates",
@@ -485,34 +360,3 @@ export const pagePlaceholders = pageContent;
 
 /** @deprecated Use testimonials */
 export const testimonialPlaceholders = testimonials;
-
-export const programPageDefaults = {
-  headline: "[Program headline pending]",
-  intro: "[Program details pending.]",
-  highlightsTitle: "What Families Can Expect",
-  highlights: [
-    "[Program highlight pending]",
-    "[Program highlight pending]",
-    "[Program highlight pending]",
-  ],
-  dailyRhythmTitle: "A Day in the Classroom",
-  dailyRhythm: "[Daily schedule details pending.]",
-  ctaNote:
-    "Call 330-966-7010 and ask for Katie Thomas to schedule a visit or learn more.",
-} as const;
-
-export const preschoolPageContent = {
-  headline: "Licensed Preschool",
-  intro:
-    "Our licensed preschool program meets Monday through Friday, 9:00 AM to 11:30 AM, in a friendly, comfortable classroom environment.",
-  highlightsTitle: "What Families Can Expect",
-  highlights: [
-    "Licensed preschool program",
-    "Activities that may include literature, cooking, math, letter manipulatives, and other experiences that support development",
-    "Educated staff focused on a fun, clean, educational, and creative environment",
-  ],
-  dailyRhythmTitle: "Program Hours",
-  dailyRhythm: "Monday through Friday, 9:00 AM to 11:30 AM.",
-  ctaNote:
-    "Call 330-966-7010 and ask for Katie Thomas to schedule a visit or learn more.",
-} as const;

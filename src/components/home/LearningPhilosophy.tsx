@@ -23,7 +23,9 @@ export function LearningPhilosophy() {
         <PlaceholderImage
           label={philosophy.imageLabel}
           alt={philosophy.imageAlt}
+          src={philosophy.imageSrc}
           aspect="landscape"
+          objectPosition="center 30%"
         />
       </div>
     </Section>
