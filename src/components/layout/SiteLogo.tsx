@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/content/site";
-import { cx } from "@/lib/utils";
+import { assetPath, cx } from "@/lib/utils";
 
 type SiteLogoProps = {
   className?: string;
@@ -19,7 +19,7 @@ export function SiteLogo({ className, priority = false }: SiteLogoProps) {
       aria-label={`${siteConfig.name} home`}
     >
       <Image
-        src={siteConfig.logo.src}
+        src={assetPath(siteConfig.logo.src)}
         alt={siteConfig.logo.alt}
         width={siteConfig.logo.width}
         height={siteConfig.logo.height}

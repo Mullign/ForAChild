@@ -4,20 +4,21 @@ import { fileURLToPath } from "url";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
+/** Set by the GitHub Pages workflow (e.g. "/ForAChild"); empty for local dev or a custom domain. */
+const basePath = process.env.PAGES_BASE_PATH ?? "";
+
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath,
+  trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   turbopack: {
     root: rootDir,
   },
   images: {
-    formats: ["image/avif", "image/webp"],
-  },
-  async redirects() {
-    return [
-      { source: "/programs", destination: "/", permanent: true },
-      { source: "/programs/:path*", destination: "/", permanent: true },
-      { source: "/faq", destination: "/", permanent: true },
-      { source: "/enrollment", destination: "/contact", permanent: true },
-    ];
+    unoptimized: true,
   },
 };
 

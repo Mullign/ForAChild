@@ -26,9 +26,15 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Scripts
 
 - `npm run dev` — development server
-- `npm run build` — production build
-- `npm run start` — serve production build
+- `npm run build` — static export to `out/`
 - `npm run lint` — ESLint
+
+## Deployment (GitHub Pages)
+
+Every push to `main` runs `.github/workflows/nextjs.yml`, which builds the static export and publishes it to GitHub Pages on the custom domain [forachildllc.com](https://forachildllc.com) (set in repo Settings → Pages, plus the root `CNAME` file).
+
+- The site is a static export (`output: "export"`), so server-only features (redirects, headers, API routes, image optimization) are not available.
+- The workflow passes the Pages base path as `PAGES_BASE_PATH` — empty with the custom domain, `/ForAChild` without one. Local images in `/public` go through `assetPath()` so they work either way.
 
 ## Where to edit content
 
@@ -64,7 +70,7 @@ Use this list as you gather materials from the center. Check items off as they a
 - [x] Classroom activity photos (infant/toddler, learning, play)
 - [x] Gallery set (6 real classroom photos)
 - [ ] More gallery photos as available (outdoor play, playground, family events, art, music, etc.)
-- [ ] Staff headshots (Cricket Scheurer, Katie Thomas)
+- [x] Team group photo on About → Meet the Team (individual headshot slots removed)
 
 ### Safety & trust
 
@@ -84,7 +90,7 @@ Use this list as you gather materials from the center. Check items off as they a
 
 ### Contact / enrollment (office page)
 
-Enrollment and tours go through **Contact** (`/contact`) — Katie’s office. `/enrollment` redirects there.
+Enrollment and tours go through **Contact** (`/contact`) — Katie’s office.
 
 - [ ] **Enrollment packet / downloadable forms** (PDF links), if they want them on the site
 - [ ] Tuition / rates (only if they want this public)

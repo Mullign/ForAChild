@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cx } from "@/lib/utils";
+import { assetPath, cx } from "@/lib/utils";
 
 type SiteImageProps = {
   label: string;
@@ -47,7 +47,7 @@ export function SiteImage({
         )}
       >
         <Image
-          src={src}
+          src={assetPath(src)}
           alt={accessibleAlt}
           fill
           priority={priority}

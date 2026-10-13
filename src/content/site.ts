@@ -262,6 +262,12 @@ export const galleryImages = [
 /** @deprecated Use galleryImages */
 export const galleryPlaceholders = galleryImages;
 
+export const teamPhoto = {
+  src: "/images/team/team-photo.jpg",
+  label: "The For A Child team",
+  alt: "Members of the For A Child team smiling together at an outdoor community event",
+} as const;
+
 export const teamMembers = [
   {
     id: "cricket",
@@ -271,8 +277,6 @@ export const teamMembers = [
       "For A Child first opened its doors in 1994 and has been owned by Cricket Scheurer since 2009.",
       "[Detailed biography pending.]",
     ],
-    imageLabel: "Cricket Scheurer photo pending",
-    imageAlt: "[Photo of Cricket Scheurer — pending]",
   },
   {
     id: "katie",
@@ -283,8 +287,6 @@ export const teamMembers = [
       "When you contact For A Child, please ask for Katie. She will be happy to answer questions and set up a visit.",
       "[Additional biography details pending.]",
     ],
-    imageLabel: "Katie Thomas photo pending",
-    imageAlt: "[Photo of Katie Thomas — pending]",
   },
 ] as const;
 
