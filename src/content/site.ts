@@ -215,7 +215,7 @@ export const testimonials = [
     id: "2",
     quote:
       "Our family is truly grateful for the exceptional care our children receive at For a Child. From the moment we first walked through the doors, we were welcomed with genuine warmth and compassion. Every staff member is caring, patient, and deeply committed to creating a nurturing environment where children feel safe, supported, and loved. The center offers the perfect balance of fun and learning. Our kids look forward to their days filled with creative activities, engaging lessons, and plenty of laughter. We especially appreciate the thought and effort put into planning exciting field trips and festive holiday celebrations that bring the entire family together. These events have helped us build connections not only with the staff but with other families as well—truly making the center feel like an extension of our home. Finding a daycare that combines safety, education, joy, and a strong family focus is rare, and we feel incredibly fortunate to be part of this wonderful community. Our children are thriving, growing, and happy—and that means everything to us.",
-    name: "Steven and Andrea Albaugh",
+    name: "Steven and Andrea A.",
     detail: "",
   },
 ] as const;
